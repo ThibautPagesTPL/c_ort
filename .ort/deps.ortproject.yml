@@ -1,2 +1,8 @@
 dependencies:
   - purl: "pkg:github/STMicroelectronics/cmsis-device-u5@v1.4.2"
+    vcs:
+      type: "Git"
+      url: "https://github.com/STMicroelectronics/cmsis-device-u5.git"
+      revision: "v1.4.2"
+      path: "/"
+
