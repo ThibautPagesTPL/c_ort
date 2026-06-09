@@ -1,8 +1,3 @@
-[submodule "deps/cmsis-device-u5"]
-	path = deps/cmsis-device-u5
-	url = https://github.com/STMicroelectronics/cmsis-device-u5.git
-	branch = main
-
 [submodule "deps/CMSIS_5"]
 	path = deps/CMSIS_5
 	url = https://github.com/ARM-software/CMSIS_5.git
