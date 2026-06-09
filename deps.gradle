@@ -1,0 +1,36 @@
+// deps.gradle
+// Fichier de dépendances déclaratif reconnu par ORT via le package manager "unmanaged"
+// ou utilisé comme référence pour le fichier .ort/analyzer-result.yml manuel.
+
+// Format : chaque dépendance est identifiée par son identifiant de paquet ORT
+// Syntaxe : "<type>:<namespace>/<name>:<version>"
+
+dependencies {
+    // CMSIS Device STM32U5
+    // Source : https://github.com/STMicroelectronics/cmsis-device-u5
+    implementation("GitHub:STMicroelectronics/cmsis-device-u5:v1.4.2")
+
+    // CMSIS 5 (ARM)
+    // Source : https://github.com/ARM-software/CMSIS_5
+    implementation("GitHub:ARM-software/CMSIS_5:5.9.0")
+
+    // STM32U5xx HAL Driver
+    // Source : https://github.com/STMicroelectronics/stm32u5xx-hal-driver
+    implementation("GitHub:STMicroelectronics/stm32u5xx-hal-driver:v1.6.2")
+
+    // CMSIS-FreeRTOS
+    // Source : https://github.com/ARM-software/CMSIS-FreeRTOS
+    implementation("GitHub:ARM-software/CMSIS-FreeRTOS:v11.2.0")
+
+    // BTstack
+    // Source : https://github.com/bluekitchen/btstack
+    implementation("GitHub:bluekitchen/btstack:v1.6.1")
+
+    // TinyUSB (épinglé sur un commit spécifique)
+    // Source : https://github.com/hathach/tinyusb
+    implementation("GitHub:hathach/tinyusb:9c8c5c1")
+
+    // NNoM - Neural Network on Microcontrollers (épinglé sur un commit spécifique)
+    // Source : https://github.com/majianjia/nnom
+    implementation("GitHub:majianjia/nnom:91e4b00")
+}

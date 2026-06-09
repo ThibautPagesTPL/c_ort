@@ -1,0 +1,34 @@
+[submodule "deps/cmsis-device-u5"]
+	path = deps/cmsis-device-u5
+	url = https://github.com/STMicroelectronics/cmsis-device-u5.git
+	branch = main
+
+[submodule "deps/CMSIS_5"]
+	path = deps/CMSIS_5
+	url = https://github.com/ARM-software/CMSIS_5.git
+	branch = master
+
+[submodule "deps/stm32u5xx-hal-driver"]
+	path = deps/stm32u5xx-hal-driver
+	url = https://github.com/STMicroelectronics/stm32u5xx-hal-driver.git
+	branch = main
+
+[submodule "deps/CMSIS-FreeRTOS"]
+	path = deps/CMSIS-FreeRTOS
+	url = https://github.com/ARM-software/CMSIS-FreeRTOS.git
+	branch = main
+
+[submodule "deps/btstack"]
+	path = deps/btstack
+	url = https://github.com/bluekitchen/btstack.git
+	branch = master
+
+[submodule "deps/tinyusb"]
+	path = deps/tinyusb
+	url = https://github.com/hathach/tinyusb.git
+	branch = master
+
+[submodule "deps/nnom"]
+	path = deps/nnom
+	url = https://github.com/majianjia/nnom.git
+	branch = master

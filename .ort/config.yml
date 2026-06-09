@@ -1,0 +1,56 @@
+# .ort/config.yml
+# Configuration OSS Review Toolkit pour ce projet embarqué C.
+# Documentation : https://oss-review-toolkit.org/docs/configuration/ort-yml
+
+ort:
+  # -------------------------------------------------------------------------
+  # Analyzer : découverte des dépendances
+  # -------------------------------------------------------------------------
+  analyzer:
+    allowDynamicVersions: true
+    # ORT détectera les sous-modules Git comme package manager "unmanaged"
+    # ou via le resolver "GitSubmodules"
+    enabledPackageManagers:
+      - GitSubmodules
+      - Unmanaged
+
+  # -------------------------------------------------------------------------
+  # Advisor : sources de vulnérabilités
+  # -------------------------------------------------------------------------
+  advisor:
+    enabledAdvisors:
+      - OssIndex          # Sonatype OSS Index (CVE, GitHub advisories…)
+      - VulnerableCode    # nexB VulnerableCode (optionnel, nécessite instance)
+      # - GitHubDefectsAdvisor  # requiert token GitHub
+
+  # -------------------------------------------------------------------------
+  # Scanner : détection de licences
+  # -------------------------------------------------------------------------
+  scanner:
+    skipExcluded: true
+    detectedLicenseMapping:
+      "LicenseRef-scancode-unknown-license-reference": "NOASSERTION"
+
+  # -------------------------------------------------------------------------
+  # Reporter
+  # -------------------------------------------------------------------------
+  reporter:
+    formats:
+      - WebApp
+      - CycloneDX      # SBOM format standard
+      - SpdxDocument   # SPDX 2.3
+
+  # -------------------------------------------------------------------------
+  # Exclusions (fichiers de test, exemples…)
+  # -------------------------------------------------------------------------
+  excludes:
+    paths:
+      - pattern: "deps/*/examples/**"
+        reason: "EXAMPLE_OF"
+        comment: "Exemples non inclus dans le produit final"
+      - pattern: "deps/*/test*/**"
+        reason: "TEST_OF"
+        comment: "Code de test non inclus dans le produit final"
+      - pattern: "deps/*/docs/**"
+        reason: "OTHER"
+        comment: "Documentation uniquement"
