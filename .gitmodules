@@ -32,3 +32,6 @@
 	path = deps/nnom
 	url = https://github.com/majianjia/nnom.git
 	branch = master
+[submodule "deps/deps/cmsis-device-u5"]
+	path = deps/deps/cmsis-device-u5
+	url = https://github.com/STMicroelectronics/cmsis-device-u5.git
