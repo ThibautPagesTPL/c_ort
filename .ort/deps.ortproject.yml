@@ -1,8 +1,17 @@
 dependencies:
   - purl: "pkg:github/STMicroelectronics/cmsis-device-u5@v1.4.2"
+    description: "CMSIS Device Support Package for STM32U5 series microcontrollers."
     vcs:
       type: "Git"
       url: "https://github.com/STMicroelectronics/cmsis-device-u5.git"
       revision: "v1.4.2"
       path: "/"
+    declaredLicenses:
+      - "Apache-2.0"
+    homepageUrl: "https://github.com/STMicroelectronics/cmsis-device-u5"
+    scopes:
+      - "main"
+    linkage: "STATIC"
+    isModified: false
+    isMetadataOnly: false
 
